@@ -710,13 +710,15 @@ html,body{
     font-family: 'Poppins', sans-serif;
     margin-top: 17px;
 }
+
+
 /* featured-header  */
 
 
 /* ---- .item ---- */
 .filtr-container .filtr-item {
     overflow:hidden;
-    float: left;
+    float: center;
     position:relative;
     margin-bottom: 30px;
     overflow:hidden;
