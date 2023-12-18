@@ -1049,7 +1049,7 @@ html,body{
 --------------------------------------*/
 .special-offer{
     position: relative;
-    background: url(../../assets/images/offer/offer-banner.jpg)no-repeat center;
+    background: url(../../assets/images/FotosLotes/foto33.jpg)no-repeat center;
     background-size: cover;
     z-index: 1;
 }
@@ -1081,7 +1081,7 @@ html,body{
     z-index: 1;
 }
 .single-special-offer-bg img {
-    height: 807px;
+    height: 607px;
 }
 
 .single-special-shape-txt {
@@ -1120,14 +1120,18 @@ html,body{
 .single-special-offer-txt{
     padding: 172px 0 0;
 }
-.single-special-offer h2{
-    color: #74eaff;
+.single-special-offer h1{
+    color: #f8f8f8; /*#74eaff*/
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     margin-bottom: 22px;
 }
 /*single-special-offer*/
+
+.single-special-offer-txt p{
+    color: #fff;
+}
 
 
 .packages-para.special-offer-para p{
