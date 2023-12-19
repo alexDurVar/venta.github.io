@@ -69,12 +69,14 @@
 
 		<!-- main-menu Start -->
 
-		<div class="notification" id="orientationNotification">
-			<p>Para una mejor experiencia, por favor gira tu teléfono horizontalmente.</p>
-		</div>
+		
 
 		<style>
 			.notification {
+				/*position: fixed;*/ /* Cambiado de absolute a fixed */
+				top: 0; /* Fijar en la parte superior de la pantalla */
+				left: 0; /* Fijar en el lado izquierdo de la pantalla */
+				width: 100%; /* Ocupar todo el ancho de la pantalla */
 				display: none;
 				background-color: #f8d7da; /* Color de fondo rojo claro */
 				color: #721c24; /* Color de texto rojo oscuro */
@@ -93,6 +95,11 @@
 			
 				function showNotification() {
 					notification.style.display = "block";
+			
+					// Ocultar la notificación después de 5 segundos (5000 milisegundos)
+					setTimeout(function () {
+						hideNotification();
+					}, 10000);
 				}
 			
 				function hideNotification() {
@@ -118,6 +125,7 @@
 				// Verificar la orientación al cambiar el tamaño de la ventana
 				window.addEventListener("resize", checkOrientation);
 			});
+			
 			
 		</script>
 
@@ -155,10 +163,17 @@
 								</div><!-- /.navbar-collapse -->
 							</div><!-- /.main-menu-->
 						</div><!-- /.col-->
+						
 					</div><!-- /.row -->
 					<div class="home-border"></div><!-- /.home-border-->
+					
+					
 				</div><!-- /.container-->
+				<div class="notification" id="orientationNotification">
+					<p>Para una mejor experiencia, por favor gira tu dispositivo horizontalmente.</p>
+				</div>
 			</div><!-- /.header-area -->
+			
 
 		</header><!-- /.top-area-->
 		<!-- main-menu End -->
