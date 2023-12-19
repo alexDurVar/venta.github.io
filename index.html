@@ -68,6 +68,59 @@
 		<![endif]-->
 
 		<!-- main-menu Start -->
+
+		<div class="notification" id="orientationNotification">
+			<p>Para una mejor experiencia, por favor gira tu teléfono horizontalmente.</p>
+		</div>
+
+		<style>
+			.notification {
+				display: none;
+				background-color: #f8d7da; /* Color de fondo rojo claro */
+				color: #721c24; /* Color de texto rojo oscuro */
+				padding: 10px;
+				text-align: center;
+			}
+			
+			.notification p {
+				margin: 0;
+			}
+			
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var notification = document.getElementById("orientationNotification");
+			
+				function showNotification() {
+					notification.style.display = "block";
+				}
+			
+				function hideNotification() {
+					notification.style.display = "none";
+				}
+			
+				function checkOrientation() {
+					if (window.innerHeight > window.innerWidth) {
+						// Vertical
+						showNotification();
+					} else {
+						// Horizontal
+						hideNotification();
+					}
+				}
+			
+				// Verificar la orientación al cargar la página
+				checkOrientation();
+			
+				// Verificar la orientación al cambiar la orientación
+				window.addEventListener("orientationchange", checkOrientation);
+			
+				// Verificar la orientación al cambiar el tamaño de la ventana
+				window.addEventListener("resize", checkOrientation);
+			});
+			
+		</script>
+
 		<header class="top-area">
 			<div class="header-area">
 				<div class="container">
@@ -441,9 +494,9 @@
 		 </script>
 
 	<script>
-    	document.addEventListener('contextmenu', function (e) {
-        	e.preventDefault();
-    	});
+    	//document.addEventListener('contextmenu', function (e) {
+        //	e.preventDefault();
+    	//});
 	</script>
 	
 	
